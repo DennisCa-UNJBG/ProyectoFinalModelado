@@ -3,55 +3,32 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <h1>Proyecto de Modelado Computacional</h1>
-
-      <nav>
-        <RouterLink to="/">Inicio</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/interpolacion">Interpolación Computacional</RouterLink>
-      </nav>
+  <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <RouterLink class="navbar-brand" to="/">Inicio</RouterLink>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/about">about</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/lagrange">lagrange</RouterLink>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
     </div>
-  </header>
-
+  </div>
+</nav>
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-  margin: 1rem;
-}
-h1 {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-nav {
-  width: 100%;
-  font-size: 24px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
 </style>
