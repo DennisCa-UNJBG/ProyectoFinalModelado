@@ -23,6 +23,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="nav-item">
           <RouterLink class="nav-link" to="/mincuadrados">Mínimos Cuadrados</RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/lineal">Lineal</RouterLink>
+        </li>
       </ul>
     </div>
   </div>
