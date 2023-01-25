@@ -30,7 +30,7 @@ export default {
 	data() {
 		return {
 			points: '',
-			x: 0,
+			x: '',
 			result: 0,
 		};
 	},

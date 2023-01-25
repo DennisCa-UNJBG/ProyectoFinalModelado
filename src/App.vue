@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink class="nav-link" to="/newton">Newton</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <RouterLink class="nav-link" to="/mincuadrados">Mínimos Cuadrados</RouterLink>
         </li>
       </ul>
     </div>

@@ -32,6 +32,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/NewtonView.vue')
+    },
+    {
+      path: '/mincuadrados',
+      name: 'mincuadrados',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/MinimosCuadradosView.vue')
     }
   ]
 })
