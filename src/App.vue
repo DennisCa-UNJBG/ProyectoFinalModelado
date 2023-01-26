@@ -29,6 +29,9 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="nav-item">
           <RouterLink class="nav-link" to="/trapecio">Trapecio</RouterLink>
         </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/simpson">Simpson</RouterLink>
+        </li>
       </ul>
     </div>
   </div>

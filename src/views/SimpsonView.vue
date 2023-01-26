@@ -1,5 +1,5 @@
 <template>
-	<h1 class="text-center">Interpolación por el método del trapecio</h1>
+	<h1 class="text-center">Interpolación por el método de Simpson 1/3(Pares)</h1>
 	<div class="container text-center">
 		<div class="row justify-content-md-center">
 			<div class="col-md-12 col-lg-8 col-xl-8">
@@ -17,14 +17,14 @@
 						<input v-model="cantPart" type="text" class="form-control" id="cantPart">
 					</div>
                     <div class="col-md-6">
-						<label for="polinomio" class="form-label">Ingrese el polinomio:</label>
+						<label for="polinomio" class="form-label">Ingrese el polinomio a integrar:</label>
 						<input v-model="polinomio" type="text" class="form-control" id="polinomio" placeholder="1+x^2">
 					</div>
 					<div class="col-12">
 						<button @click="calcularTrapecio" class="btn btn-primary">Calcular</button>
 					</div>
 					<div class="col-12">
-						<h3 v-if="result">El resultado es: {{ result }}</h3>
+						<h4 v-if="result">El resultado de la derivada es: {{ result }}</h4>
 					</div>
 				</form>
 			</div>
@@ -50,15 +50,24 @@ export default {
 			console.log("TEST ...");
             let lInf = parseFloat(this.limInferior);
             let lSup = parseFloat(this.limSuperior);
-            let h = (lSup - lInf) / this.cantPart;
-            let sum = (this.evalPoli(lInf) + this.evalPoli(lSup)) / 2.0;
+            let part = parseFloat(this.cantPart);
+            let x =[];
+            let sum = 0;
+            x[0] = lInf;
+            let h = (lSup - lInf) / part;
+
+            for(let j =1; j <= part; j++){
+                x[j] = lInf + h*j;
+            }
+            console.log(x);
+
+            for (let i = 1; i <= (part/2); i++) {
+                sum += this.evalPoli(x[2*i-2]) + 4*this.evalPoli(x[2*i-1]) + this.evalPoli(x[2*i])
+            }
+
             console.log(h);
             console.log(sum);
-
-            for (let evaluar = (lInf + h); evaluar < lSup; evaluar += h){
-                sum += this.evalPoli(evaluar);
-            }
-            sum = sum * h;
+            sum = (sum * h)/3;
             console.log("Resultado:"+sum);
             this.result = sum;
 
