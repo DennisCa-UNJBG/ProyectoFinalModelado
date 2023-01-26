@@ -30,7 +30,10 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink class="nav-link" to="/trapecio">Trapecio</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink class="nav-link" to="/simpson">Simpson</RouterLink>
+          <RouterLink class="nav-link" to="/simpson">Simpson 1/3</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/simpson2">Simpson 3/8</RouterLink>
         </li>
       </ul>
     </div>
