@@ -13,7 +13,7 @@
 						<input v-model="points" type="text" class="form-control" id="points" placeholder="1 3, 2 10, 3 2">
 					</div>
 					<div class="col-12">
-						<button @click="calcularNewton" class="btn btn-primary">Calcular</button>
+						<button @click="calculateLagrange" class="btn btn-primary">Calcular</button>
 					</div>
 					<div class="col-12">
 						<h3 v-if="result">El resultado es: {{ result }}</h3>
