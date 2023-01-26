@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item ocultar">
           <RouterLink class="nav-link" to="/about">about</RouterLink>
         </li>
         <li class="nav-item">
@@ -43,4 +43,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
+.ocultar{
+  display:none;
+}
 </style>
