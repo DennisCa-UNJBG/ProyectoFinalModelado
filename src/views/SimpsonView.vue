@@ -18,13 +18,13 @@
 					</div>
                     <div class="col-md-6">
 						<label for="polinomio" class="form-label">Ingrese el polinomio a integrar:</label>
-						<input v-model="polinomio" type="text" class="form-control" id="polinomio" placeholder="1+x^2">
+						<input v-model="polinomio" type="text" class="form-control" id="polinomio" placeholder="((10*x)/(sqrt(x)+1)^5)">
 					</div>
 					<div class="col-12">
 						<button @click="calcularTrapecio" class="btn btn-primary">Calcular</button>
 					</div>
 					<div class="col-12">
-						<h4 v-if="result">El resultado de la derivada es: {{ result }}</h4>
+						<h4 v-if="result">El resultado de la integral es: {{ result }}</h4>
 					</div>
 				</form>
 			</div>
@@ -38,10 +38,10 @@ import * as math from "mathjs";
 export default {
 	data() {
 		return {
-			polinomio: "",
-			limInferior: "",
-			limSuperior: "",
-			cantPart: "",
+			polinomio: "((10*x)/(sqrt(x)+1)^5)",
+			limInferior: "1",
+			limSuperior: "2",
+			cantPart: "4",
 			result: "",
 		};
 	},

@@ -17,7 +17,9 @@
 						<button @click="calculateNewton" class="btn btn-primary">Calcular</button>
 					</div>
 					<div class="col-12">
-						<h3 v-if="result">El resultado es: {{ result }}</h3>
+						<h4 v-if="ecuacion">El polinomio resultante es: <br> {{ ecuacion }}</h4>
+                        <hr>
+						<h4 v-if="result">El resultado del polinomio es: {{ result }}</h4>
 					</div>
 				</form>
 			</div>
@@ -29,9 +31,10 @@
 export default {
 	data() {
 		return {
-			points: '',
-			x: '',
-			result: 0,
+			points: "1 56.5,5 113,20 181,40 214.5",
+			x: "2",
+			result: "",
+			ecuacion: "",
 		};
 	},
 	methods: {
@@ -103,6 +106,7 @@ export default {
             console.log("\n\n==============================");
 
             console.log("f(" + valorX + ") = " + y_aprox);
+            this.ecuacion = polinomio;
             return y_aprox;
         },
         dif_finita(x1, y1, x2, y2){

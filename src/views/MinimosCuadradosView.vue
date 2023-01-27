@@ -11,7 +11,7 @@
 					</div>
 					<div class="col-md-6">
 						<label for="points" class="form-label">Ingrese los puntos (x, y) separados por comas:</label>
-						<input v-model="points" type="text" class="form-control" id="points" placeholder="1 3, 2 10, 3 2">
+						<textarea v-model="points" type="text" class="form-control" id="points" placeholder="1 3, 2 10, 3 2"> </textarea>
 					</div>
 					<div class="col-12">
 						<button @click="calculateMinimosCuadrados" class="btn btn-primary">Calcular</button>
@@ -30,8 +30,8 @@
 export default {
 	data() {
 		return {
-			points: '',
-			x: '',
+			points: '5.7 6.7,9.2 10,8.5 8.2,6.3 8.4,1.3 2.5,6 6.8,3 3.6,3.7 3.8,9.3 8.8,6.5 8.2',
+			x: '8',
 			result: []
 		};
 	},
