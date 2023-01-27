@@ -38,10 +38,10 @@ import * as math from "mathjs";
 export default {
 	data() {
 		return {
-			polinomio: "",
-			limInferior: "",
-			limSuperior: "",
-			cantPart: "",
+			polinomio: "x/(1+x^2)",
+			limInferior: "1",
+			limSuperior: "2",
+			cantPart: "3",
 			result: "",
 		};
 	},

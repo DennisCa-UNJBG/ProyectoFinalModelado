@@ -30,8 +30,8 @@ import * as math from "mathjs"; // la libreria tiene el metodo interpolateLagran
 export default {
 	data() {
 		return {
-			x: "",
-			points: "",
+			x: "2.5",
+			points: "0 30,1 48,2 67,3 91",
 			result: "",
 		};
 	},
